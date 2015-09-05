@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  
-  get 'reviews/new'
-
-  get 'reviews/create'
-
-  get 'reviews/show'
 
   # user routes
   get "/signup", to: "users#new" 
