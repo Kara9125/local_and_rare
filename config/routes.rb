@@ -15,5 +15,5 @@ Rails.application.routes.draw do
 
   resources :reviews, except: [:index]
 
-  root "artists#index"
+  root "reviews#index"
 end
