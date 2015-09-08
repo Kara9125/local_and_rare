@@ -1,2 +1,9 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<h1>New Review</h1>
+<%= form_for @review do |f| %>
+	<%= f.text_field :artist, placeholder: "Artist" %><br>
+	<%= f.text_field :text, placeholder: "Review" %><br>
+	
+	<hr>
+	<%= f.submit "Save Review" %><br>
+
+<% end %>

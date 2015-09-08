@@ -1,8 +1,14 @@
 class ReviewsController < ApplicationController
+  
+
   def index
+    @reviews = Review.all
+    render :index
   end
 
   def new
+    @review = Review.new
+    render :new
   end
 
   def create
