@@ -1,7 +1,8 @@
 <h1>Reviews</h1>
 <hr>
 <% @reviews.each do |review| %>
-	<p><%= review.name %> - <%= review.artist %> - <%= review.text %> </p>
+	<p><%= review.artist_id %> <%= review.ratings %> <br>
+		<%= review.text %></p>
 
 <% end %>
 
