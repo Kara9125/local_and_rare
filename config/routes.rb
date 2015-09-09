@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
 
   # artists route
-  resources :artists, except: [:index]
-
-  # reviews route
-  resources :reviews, except: [:index]
+  resources :artists do
+    resources :reviews, except: [:index] 
+  end
+  
 
   root "reviews#index"
 end
