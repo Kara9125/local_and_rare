@@ -1,5 +1,7 @@
-<h1>Artists</h1>
-<hr>
-<% @artists.each do |artist| %>
-	<p><%= link_to artist.name, artist_path(artist) %></p>
-<% end %>
+<div class="container">
+	<h1>Artists</h1>
+	<hr>
+	<% @artists.each do |artist| %>
+		<p><%= link_to artist.name, artist_path(artist) %></p>
+	<% end %>
+</div>
