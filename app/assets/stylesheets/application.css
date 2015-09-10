@@ -32,6 +32,13 @@ body {
 	padding-right: 30px
 }
 
+#signup{
+	margin-top: -30px;
+}
+
 #artistnameinreview{
+	font-weight: bold;
+}
+#artistsreviewtitle{
 	font-weight: bold;
 }
