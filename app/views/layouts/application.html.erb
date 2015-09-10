@@ -2,14 +2,25 @@
 <html>
 <head>
   <title>RareAndLocal</title>
+
   <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<nav class="navbar navbar-inverse ">
+	<div class= "col-sm-3" id="logo"><h1>Vibart</h1></div>
+	  <ul class="nav navbar-nav navbar-right">
+        <li id="signup"><a href="/signup">Sign Up</a></li>
+        <li id="login"><a href="/login">Log In</a></li>
+      </ul>
+
+	</nav>
 
 <%= yield %>
 
 </body>
 </html>
+
+

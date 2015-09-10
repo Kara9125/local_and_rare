@@ -1,6 +1,15 @@
+<div class="container">
 <h1>Profile Page</h1>
+<p>Hello, <%= current_user.first_name %></p>
+<hr>
 <div>
-	<p><%= current_user.first_name %> <%= current_user.last_name %></p>
+	<h3>My Reviews</h3>
 </div>
-<h3>My Reviews</h3>
-	<%= current_user.reviews %>
+<hr>
+	<% current_user.reviews.each do |review| %>
+		<h5 id="artistnameinreview"><%=link_to review.artist.name, review.artist %></h5>
+		<p>Artist Rating: <%= review.ratings %></p>
+		<p><%= review.text %></p>
+		<hr>
+	<% end %>
+</div>

@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Log In</h1>
 <%= form_for :user, url: sessions_path do |f| %>
 	<%= f.email_field :email, placeholder: "Email" %><br>
@@ -6,3 +7,4 @@
 	<%= f.submit "Log In" %><br>
 
 <% end %>
+</div>

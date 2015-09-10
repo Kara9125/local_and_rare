@@ -15,12 +15,14 @@ class ReviewsController < ApplicationController
   def create
     @artist = Artist.find(params[:artist_id])
     @review = current_user.reviews.new(review_params)
+    if current_user  
       if @review.save 
         @artist.reviews << @review
         redirect_to artist_path(@artist)
       else
         redirect_to new_artist_review_path(@artist)
       end
+    end
   end
 
   def show

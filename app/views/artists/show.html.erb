@@ -1,16 +1,18 @@
 <div class="container">
 	<h2><%= @artist.name %></h2>
 		<h5><%= @artist.location %></h5>
+		<h5>@<%= @artist.instagram_user_name %></h5>
+
 	<div class="btn btn-default"><%= link_to "Add New Review", new_artist_review_path(@artist) %>
 	</div>
-	<% @reviews.each do |review|  %>
-		<p><%= review.ratings %>
-			<%= review.text %></p>
-	<% end %>
 	<hr>
 	<div class = "row">
 	<% @photos.each do |photo| %>
 		<div class = "col-sm-4 text-center"><%= image_tag photo.images.standard_resolution.url %></div>
 	<% end %>
 	</div>
+	<% @reviews.each do |review|  %>
+		<p><%= review.ratings %>
+			<%= review.text %></p>
+	<% end %>
 </div>
