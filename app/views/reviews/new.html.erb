@@ -1,15 +1,19 @@
-<h1>New Review</h1>
-<%= form_for [@artist, @review] do |f| %>
-	<h4>Rating</h4>
-		<%= f.radio_button :ratings, '1' %>
-		<%= f.radio_button :ratings, '2' %>
-		<%= f.radio_button :ratings, '3' %>
-		<%= f.radio_button :ratings, '4' %>
-		<%= f.radio_button :ratings, '5' %><br>
-	<br>
-	<%= f.text_area :text, placeholder: "Review" %><br>
-	
-	<hr>
-	<%= f.submit "Save Review" %><br>
+<div class="container">
+	<h1>New Review</h1>
+	<%= form_for [@artist, @review] do |f| %>
+		<h4>Rating</h4>
+			<div class="star">
+				<%= f.radio_button :ratings, '1' %>
+				<%= f.radio_button :ratings, '2' %>
+				<%= f.radio_button :ratings, '3' %>
+				<%= f.radio_button :ratings, '4' %>
+				<%= f.radio_button :ratings, '5' %><br>
+			</div>
+		<br>
+		<%= f.text_area :text, placeholder: "Review" %><br>
+		
+		<hr>
+		<%= f.submit "Save Review" %><br>
 
-<% end %>
+	<% end %>
+</div>

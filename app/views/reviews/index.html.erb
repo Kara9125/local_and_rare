@@ -1,11 +1,13 @@
-<h1>Reviews</h1>
-<hr>
-<% @reviews.each do |review| %>
-	<p><%= review.artist_id %> <%= review.ratings %> <br>
-		<%= review.text %></p>
+<div class="container">
+	<h1>Reviews</h1>
+	<hr>
+	<% @reviews.each do |review| %>
+		<p><%= review.artist_id %> <%= review.ratings %> <br>
+			<%= review.text %></p>
 
-<% end %>
+	<% end %>
 
-<% if current_user %>
-	<%= link_to "Profile", profile_path %>
-<% end %>
+	<% if current_user %>
+		<%= link_to "Profile", profile_path %>
+	<% end %>
+</div>
