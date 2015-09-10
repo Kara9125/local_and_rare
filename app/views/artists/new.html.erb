@@ -1,2 +1,9 @@
-<h1>Artists#new</h1>
-<p>Find me in app/views/artists/new.html.erb</p>
+<h1>New Artist</h1>
+<%= form_for @artist do |f| %>
+	<%= f.text_field :name, placeholder: "Name" %><br>
+	<%= f.text_field :location, placeholder: "Location" %><br>
+	<%= f.text_field :instagram_user_name, placeholder: "User Name" %><br>
+	<hr>
+	<%= f.submit "Create" %><br>
+
+<% end %>

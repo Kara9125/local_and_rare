@@ -1,6 +1,11 @@
-<h3><%= @artist.name %></h3>
+<h2><%= @artist.name %></h2>
+<%= link_to "Add New Review", new_artist_review_path(@artist) %>
 <hr>
 <% @reviews.each do |review|  %>
 	<p><%= review.ratings %>
 		<%= review.text %></p>
+<% end %>
+<hr>
+<% @photos.each do |photo| %>
+	<div><%= image_tag photo.images.standard_resolution.url %></div>
 <% end %>

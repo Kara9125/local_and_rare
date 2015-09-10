@@ -17,5 +17,5 @@ Rails.application.routes.draw do
   end
   
 
-  root "reviews#index"
+  root "artists#index"
 end
