@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-  
 
   def index
     @reviews = Review.all
@@ -7,6 +6,8 @@ class ReviewsController < ApplicationController
   end
 
   def new
+    # CJ: since the `Artist.find` logic is repeated in multiple controller actions,
+    # it's a good candidate to move into a private method to DRY up your code
     @artist = Artist.find(params[:artist_id])
     @review = Review.new
     render :new
