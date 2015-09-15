@@ -9,13 +9,13 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   resources :sessions, only: [:create]
+  # CJ: don't need this since you have `resources :sessions` above
   post "/sessions", to: "sessions#create"
 
   # artists route
   resources :artists do
     resources :reviews, except: [:index] 
   end
-  
 
   root "artists#index"
 end
